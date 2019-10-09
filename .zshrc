@@ -101,7 +101,7 @@ alias p="cd /Volumes/projects"
 alias dotfiles='/usr/local/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 demv(){
-    cd /Volumes/projects/demvsystems/vagrant && vagrant $@
+    (cd /Volumes/projects/demvsystems/vagrant; vagrant $@)
 }
 
 rust_build_lambda(){
@@ -127,3 +127,4 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+export PATH="/usr/local/sbin:$PATH"
